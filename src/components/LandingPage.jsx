@@ -1,39 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const LandingPage = () => {
   return (
-    <div className="w-screen h-screen bg-[url('/img/LandingPageBg.jpg')] bg-cover bg-center m-0 p-0 flex flex-col">
+    <div className="w-screen min-h-screen bg-[url('/img/LandingPageBg.jpg')] bg-cover bg-center flex flex-col">
       {/* NavBar */}
-      <div className="w-screen h-auto p-2 flex justify-center pt-10">
-        <ul className="flex flex-row space-x-2 text-white text-xl">
-          {/* nav items */}
+      <nav className="w-full p-4 flex justify-center">
+        <ul className="flex flex-wrap justify-center gap-4 text-white text-lg sm:text-xl">
           {["Home", "About", "Menu", "Contact us"].map((item, i) => (
             <li
               key={i}
-              className="cursor-pointer  flex flex-col items-center group px-4 py-2 rounded-md transition-all duration-300 hover:bg-black/20"
+              className="cursor-pointer flex flex-col items-center group px-3 py-2 rounded-md transition-all duration-300 hover:bg-black/20"
             >
-              <span className="transition-colors duration-300 group-hover:text-orange-700">
+              <span className="group-hover:text-orange-600 transition-colors duration-300">
                 {item}
               </span>
-              <span className="mt-1 h-1 w-full bg-orange-500 rounded transition-all duration-300 group-hover:bg-orange-700 group-hover:scale-x-110"></span>
+              <span className="mt-1 h-1 w-full bg-orange-500 rounded transition-all duration-300 group-hover:bg-orange-600 group-hover:scale-x-110"></span>
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
 
       {/* Body */}
-      <div className="flex flex-1 items-center px-20    ">
-        <div className="">
-          <h2 className="text-white text-6xl">
+      <main className="flex flex-1 items-center justify-center px-6 sm:px-12 md:px-24 text-center">
+        <div>
+          <h2 className="text-white text-3xl sm:text-5xl md:text-6xl leading-snug font-semibold">
             Just Order Us and <br />
-            <span className="typing"> Start the Day in the Best Way </span>
+            <span className="typing">Start the Day in the Best Way</span>
           </h2>
-          <button className=" inline-block p-2  w-25 h-12 bg-amber-600 rounded-lg  cursor-pointer hover:bg-amber-700 hover:transition-all hover:scale-110 duration-500">
-            {" "}
+
+          <button className="mt-6 px-6 py-2 bg-amber-600 text-white rounded-lg text-lg hover:bg-amber-700 transform transition-transform hover:scale-110 duration-500">
             Menu
           </button>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
