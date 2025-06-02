@@ -1,3 +1,4 @@
+@import "tailwindcss";
 .typing {
   display: inline-block;
   overflow: hidden;
