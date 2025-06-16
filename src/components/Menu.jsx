@@ -19,6 +19,7 @@ const Menu = () => {
         return <Beverages />;
       default:
         return <MainCourse />;
+        g;
     }
   };
 
